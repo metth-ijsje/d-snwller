@@ -23,6 +23,7 @@ radio.onReceivedString(function (receivedString) {
     t_Next = input.runningTime()
     T_tussen = t_Next - t_prev
     t_prev = t_Next
+    serial.writeLine("" + (T_tussen))
     radio.sendString("C")
     radio.setGroup(1)
     basic.showString(receivedString)
